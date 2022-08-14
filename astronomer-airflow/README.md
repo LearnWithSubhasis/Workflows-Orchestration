@@ -10,6 +10,7 @@ https://docs.astronomer.io/astro/cli/get-started
 
 ## 3. Initialize Astronomer Project
 astro dev init
+
 astro dev start
 
 ### 3.a. Access Astronomer UI
@@ -20,6 +21,7 @@ admin/admin
 ## 4. Create New DAG 
 Optional:
 astro dev kill
+
 astro dev start
 
 or
