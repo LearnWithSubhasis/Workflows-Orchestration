@@ -1,6 +1,5 @@
 # Steps for complex DAG, calling kubeflow pipeline from airflow DAG
 
--------------------
 ## 1. Create a Kubernetes cluster
 brew install kind
 kind create cluster
@@ -23,17 +22,23 @@ Step 1 = PreProcess
 
 Step 2 = Train
 > docker build . -t subhasis-kubeflow-train-2:latest -f Dockerfile-train
+> 
 > docker tag subhasis-kubeflow-train-2 subhasiskhatua/subhasis-kubeflow-train-2
+> 
 > docker push -a subhasiskhatua/subhasis-kubeflow-train-2
 
 Step 3 = Test
 > docker build . -t subhasis-kubeflow-test-2:latest -f Dockerfile-test
+> 
 > docker tag subhasis-kubeflow-test-2 subhasiskhatua/subhasis-kubeflow-test-2
+> 
 > docker push -a subhasiskhatua/subhasis-kubeflow-test-2
 
 Step 4 = Deploy
 > docker build . -t subhasis-kubeflow-deploy-2:latest -f Dockerfile-deploy
+> 
 > docker tag subhasis-kubeflow-deploy-2 subhasiskhatua/subhasis-kubeflow-deploy-2
+> 
 > docker push -a subhasiskhatua/subhasis-kubeflow-deploy-2
 
 #### References
