@@ -1,13 +1,16 @@
 # Steps for complex DAG, calling kubeflow pipeline from airflow DAG
 
 ## 1. Create a Kubernetes cluster
-brew install kind
-kind create cluster
-kubectl cluster-info --context kind-kind
+> brew install kind
+> 
+> kind create cluster
+> 
+> kubectl cluster-info --context kind-kind
 
 ## 2. Setup Kubeflow
-kubeflow-setup.sh
-kubectl port-forward -n kubeflow svc/ml-pipeline-ui 8081:80
+> kubeflow-setup.sh
+> 
+> kubectl port-forward -n kubeflow svc/ml-pipeline-ui 8081:80
 
 ## 3. Build Docker images for inidividual steps in the kubeflow pipeline
 > docker login
