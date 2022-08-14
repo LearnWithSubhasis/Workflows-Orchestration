@@ -7,10 +7,10 @@ from airflow import DAG
 
 # Operators; we need this to operate!
 from airflow.decorators import task
+from airflow.operators.bash import BashOperator
 from airflow.operators.python import PythonOperator
 
 from simple import print_simple
-from complex.complex import print_complex
 
 with DAG(
     'airflow-tutorial-basic-dag',
@@ -52,10 +52,16 @@ with DAG(
 
 
     run_this_2 = PythonOperator(
-        task_id='print_simple',
+        task_id='print_simple_using_python_op',
         provide_context=True,
         python_callable=print_simple,
         dag=dag)
 
+    run_task_3 = BashOperator(
+        task_id='echo_task_using_bash_op',
+        depends_on_past=False,
+        bash_command='echo "Message from echo_task_using_bash_op"',
+    )
+
     run_this = print_context()
-    run_this >> run_this_2
+    run_this >> run_this_2 >> run_task_3
