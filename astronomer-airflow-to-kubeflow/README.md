@@ -12,7 +12,7 @@
 > 
 > kubectl port-forward -n kubeflow svc/ml-pipeline-ui 8081:80
 
-## 3. Build Docker images for inidividual steps in the Kubeflow pipeline
+## 3. Build Docker images for individual steps in the Kubeflow pipeline
 > docker login
 
 #### Build, tag, push docker image to DockerHub

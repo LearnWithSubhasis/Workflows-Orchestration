@@ -12,7 +12,7 @@ from airflow.operators.bash import BashOperator
 from airflow.operators.python import PythonOperator
 
 from simple import print_simple
-from complex.complex import print_complex
+
 from kfp_pipeline import call_kubeflow_pipeline
 
 with DAG(
