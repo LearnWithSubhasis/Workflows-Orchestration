@@ -1,4 +1,4 @@
-# Steps for Astronomer Installation and Basic DAG Development
+# Steps for complex DAG, calling kubeflow pipeline from airflow DAG
 
 ## 1. Install Docker Desktop for Mac
 https://docs.docker.com/desktop/install/mac-install/
