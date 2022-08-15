@@ -25,7 +25,7 @@ Login to Docker Hub:
 Step 1 = PreProcess
 > docker build . -t subhasis-kubeflow-preprocess-2:latest
 > 
-> docker tag subhasis-kubeflow-2 subhasiskhatua/subhasis-kubeflow-preprocess-2
+> docker tag subhasis-kubeflow-preprocess-2 subhasiskhatua/subhasis-kubeflow-preprocess-2
 > 
 > docker push -a subhasiskhatua/subhasis-kubeflow-preprocess-2
 
