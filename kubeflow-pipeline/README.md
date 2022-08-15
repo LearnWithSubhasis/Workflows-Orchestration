@@ -1,4 +1,4 @@
-# Steps for creating a ML Pipeline using Kebeflow
+# Steps for creating a ML Pipeline using Kubeflow
 
 ## 1. Create a Kubernetes cluster
 > brew install kind
