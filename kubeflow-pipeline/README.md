@@ -23,7 +23,7 @@ Login to Docker Hub:
 
 #### Build, tag, push docker image to DockerHub
 Step 1 = PreProcess
-> docker build . -t subhasis-kubeflow-preprocess-2:latest
+> docker build . -t subhasis-kubeflow-preprocess-2:latest -f Dockerfile-preprocess
 > 
 > docker tag subhasis-kubeflow-preprocess-2 subhasiskhatua/subhasis-kubeflow-preprocess-2
 > 
