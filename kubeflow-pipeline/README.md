@@ -15,6 +15,10 @@ Verify that the Kubeflow Pipelines UI is accessible by port-forwarding:
 > kubectl port-forward -n kubeflow svc/ml-pipeline-ui 8081:80
 
 ## 3. Build Docker images for individual steps in the Kubeflow pipeline
+Install required Python libraries:
+> pip install -r requirements.txt
+
+Login to Docker Hub:
 > docker login
 
 #### Build, tag, push docker image to DockerHub
