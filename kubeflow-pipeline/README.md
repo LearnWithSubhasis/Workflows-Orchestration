@@ -8,8 +8,10 @@
 > kubectl cluster-info --context kind-kind
 
 ## 2. Setup Kubeflow
+To deploy the Kubeflow Pipelines, run the following commands:
 > kubeflow-setup.sh
 > 
+Verify that the Kubeflow Pipelines UI is accessible by port-forwarding:
 > kubectl port-forward -n kubeflow svc/ml-pipeline-ui 8081:80
 
 ## 3. Build Docker images for individual steps in the Kubeflow pipeline
